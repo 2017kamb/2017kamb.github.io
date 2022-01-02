@@ -2,7 +2,8 @@
 Profession - Software Developer  
 Hobby - Listening to music  
 Email - 2017kamb@gmail.com  
-Skype - raj4057kumar  
+Skype - raj4057kumar
+Whatsapp - +91 8802538108
 
 
 
@@ -17,6 +18,11 @@ Skype - raj4057kumar
 - [Linkedin](https://www.linkedin.com/in/2017kamb)
 - [Stack Overflow](https://stackoverflow.com/users/6507755/2017kamb)
 - [Blog](https://learnwithrkumar.blogspot.com)
+- [Gitlab](https://gitlab.com/2017kamb)
+- [Medium](https://medium.com/@2017kamb)
+- [Youtube](https://www.youtube.com/channel/UCQa729gsP9jNUOqpwASsLCQ/featured)
+- [Pinterest](https://in.pinterest.com/2017kamb)
+- [Reddit](https://www.reddit.com/user/2017kamb)
 
 
 
