@@ -2,7 +2,6 @@
 Profession - Software Developer  
 Hobby - Listening to music  
 Email - 2017kamb@gmail.com  
-Skype - raj4057kumar
 
 
 ### Social Profiles
