@@ -2281,7 +2281,7 @@ p {
   color: #2CA8FF !important; }
 
 .text-success {
-  color: #18ce0f !important; }
+  color: #378C3F !important; }
 
 .text-warning {
   color: #FFB236 !important; }
@@ -2598,7 +2598,7 @@ body {
   background-color: #888 !important; }
 
 .bg-primary {
-  background-color: #378C3F !important; }
+  background-color: #33813a !important; }
 
 .bg-info {
   background-color: #2CA8FF !important; }
@@ -5284,3 +5284,9 @@ a.credit {
 /* Common Style */
 .section {
   padding-bottom: 0; }
+
+.sm_img_rk img{
+  width: 30px;
+  height: 30px;
+}
+
