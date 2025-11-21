@@ -1,388 +1,727 @@
-  <!DOCTYPE html>
-<html lang="en-US">
-  <head>
+<!DOCTYPE html>
+<html lang="en">
+<head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Raj Kumar</title>    
-    <link href="css/aos.css?ver=1.1.0" rel="stylesheet">
-    <link href="css/bootstrap.min.css?ver=1.1.0" rel="stylesheet">
-    <link href="css/main.css?ver=1.1.0" rel="stylesheet">
-    <link rel="icon" type="image/png" href="images/rk.jpg">
-    <noscript>
-      <style type="text/css">
-        [data-aos] {
-            opacity: 1 !important;
-            transform: translate(0) scale(1) !important;
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raj Kumar - Senior Backend Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-      </style>
-    </noscript>
-  </head>
-  <body id="top">
-    <header>
-      <div class="profile-page sidebar-collapse">
-        <nav class="navbar navbar-expand-lg fixed-top navbar-transparent bg-primary" color-on-scroll="400">
-          <div class="container">
-            <div class="navbar-translate"><a class="navbar-brand" href="https://2017kamb.github.io/" rel="tooltip">Home</a>
-              <button class="navbar-toggler navbar-toggler close-btn-rk" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-bar bar1"></span><span class="navbar-toggler-bar bar2"></span><span class="navbar-toggler-bar bar3"></span></button>
-            </div>
-            <div class="collapse navbar-collapse justify-content-end" id="navigation">
-              <ul class="navbar-nav">
-                <li class="nav-item"><a class="sidebar-rk nav-link smooth-scroll" href="#about">About</a></li>
-                <li class="nav-item"><a class="sidebar-rk nav-link smooth-scroll" href="#skill">Skills</a></li>
-                <li class="nav-item"><a class="sidebar-rk nav-link smooth-scroll" href="#experience">Experience</a></li>
-                <li class="nav-item"><a class="sidebar-rk nav-link smooth-scroll" href="#contact">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-        </nav>
-      </div>
-    </header>
-    <div class="page-content">
-      <div class="profile-page">
-        <div class="wrapper">
-          <div class="page-header page-header-small" filter-color="green">
-            <div class="page-header-image" data-parallax="true" style="background-image: url('images/rainbow.png')"></div>
-            <div class="container">
-              <div class="content-center">
-                <div class="cc-profile-image"><a href="https://2017kamb.github.io"><img src="images/rk.jpg" alt="Image"/></a></div>
-                <div class="h2 title">Raj Kumar</div>
-                <p class="category text-white">I am a coder</p>
-                <a class="btn btn-primary smooth-scroll mr-2" href="#contact" data-aos="zoom-in" data-aos-anchor="data-aos-anchor">Contact Me</a>
-              </div>
-            </div>
-            <div class="section">
-              <div class="container">
-                <div class="button-container">
-                  <a class="btn btn-default btn-round btn-sm btn-icon" href="https://www.facebook.com/2017kamb" rel="tooltip" title="Follow me on Facebook"><img src="images/fb.png" alt="Image"/></a>
-                  <a class="btn btn-default btn-round btn-sm btn-icon" href="https://twitter.com/2017kamb" rel="tooltip" title="Follow me on Twitter"><img src="images/twitter.png" alt="Image"/></a>
-                  <a class="btn btn-default btn-round btn-sm btn-icon" href="https://github.com/2017kamb" rel="tooltip" title="Follow me on Github"><img src="images/github.png" alt="Image"/></a>
-                  <a class="btn btn-default btn-round btn-sm btn-icon" href="https://www.instagram.com/2017kamb" rel="tooltip" title="Follow me on Instagram"><img src="images/insta.jpeg" alt="Image"/></a>
-                  <a class="btn btn-default btn-round btn-sm btn-icon" href="https://learnwithrkumar.blogspot.com" rel="tooltip" title="Follow me on blogger"><img src="images/blog.jpeg" alt="Image"/></a>
-                  <a class="btn btn-default btn-round btn-sm btn-icon" href="https://www.linkedin.com/in/2017kamb" rel="tooltip" title="Follow me on linkedin"><img src="images/linkedin.png" alt="Image"/></a>
-                  <a class="btn btn-default btn-round btn-sm btn-icon" href="https://stackoverflow.com/users/6507755/2017kamb" rel="tooltip" title="Follow me on linkedin"><img src="images/so.png" alt="Image"/></a>
-                </div>    
-              </div>
-            </div>
-          </div>
+
+        :root {
+            --primary: #6366f1;
+            --primary-dark: #4f46e5;
+            --secondary: #8b5cf6;
+            --dark: #0f172a;
+            --dark-light: #1e293b;
+            --gray: #64748b;
+            --light: #f1f5f9;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: var(--dark);
+            background: var(--white);
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 1rem 0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(135deg, var(--dark) 0%, var(--dark-light) 100%);
+            padding: 6rem 2rem 4rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"><path d="M 100 0 L 0 0 0 100" fill="none" stroke="rgba(99,102,241,0.1)" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(%23grid)"/></svg>');
+            opacity: 0.5;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .hero-text .highlight {
+            color: var(--primary);
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-text p {
+            font-size: 1.25rem;
+            color: var(--gray);
+            margin-bottom: 2rem;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            margin-top: 2rem;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: var(--white);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.3);
+        }
+
+        .btn-secondary {
+            background: transparent;
+            color: var(--white);
+            border: 2px solid var(--primary);
+        }
+
+        .btn-secondary:hover {
+            background: var(--primary);
+        }
+
+        .hero-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .profile-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 2rem;
+            text-align: center;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 4px solid var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .profile-img1 {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 4px solid var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .social-icon{
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
+          border: 4px solid var(--primary);
+          margin-bottom: 1.5rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 1.5rem;
+        }
+
+        /* .social-links a {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: rgba(99, 102, 241, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-decoration: none;
+            transition: all 0.3s;
+        } */
+
+        /* .social-links a:hover {
+            background: var(--primary);
+            transform: translateY(-3px);
+        } */
+
+        /* Section Styles */
+        section {
+            padding: 5rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: 2px;
+        }
+
+        /* Skills Section */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .skill-category {
+            background: var(--light);
+            padding: 2rem;
+            border-radius: 12px;
+            transition: transform 0.3s;
+        }
+
+        .skill-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .skill-category h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: var(--white);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--dark);
+            border: 1px solid #e2e8f0;
+        }
+
+        /* Experience Section */
+        .experience-timeline {
+            position: relative;
+            padding-left: 2rem;
+        }
+
+        .experience-timeline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--primary);
+        }
+
+        .experience-item {
+            position: relative;
+            margin-bottom: 3rem;
+            padding-left: 2rem;
+        }
+
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -2.5rem;
+            top: 0;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: var(--primary);
+            border: 3px solid var(--white);
+            box-shadow: 0 0 0 3px var(--primary);
+        }
+
+        .experience-header {
+            margin-bottom: 1rem;
+        }
+
+        .experience-title {
+            font-size: 1.5rem;
+            color: var(--dark);
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-company {
+            color: var(--primary);
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .experience-date {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        .experience-description {
+            color: var(--gray);
+            line-height: 1.8;
+        }
+
+        .experience-description ul {
+            margin-top: 1rem;
+            padding-left: 1.5rem;
+        }
+
+        .experience-description li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Contact Section */
+        #contact {
+            background: var(--light);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-icon {
+            width: 50px;
+            height: 50px;
+            background: var(--primary);
+            color: var(--white);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+
+        .contact-form {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 600;
+            color: var(--dark);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.75rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 8px;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5rem;
+            }
+
+            .hero-stats {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .nav-links {
+                display: none;
+            }
+
+            .contact-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="#" class="logo"><img src="images/rk.jpg" alt="Raj Kumar" class="profile-img1"></a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
         </div>
-      </div>
-      <div class="section" id="about">
-        <div class="container">
-          <div class="card" data-aos="fade-up" data-aos-offset="10">
-            <div class="row">
-              <div class="col-lg-6 col-md-12">
-                <div class="card-body">
-                  <div class="h4 mt-0 title">About</div>
-                  <p>Hello! I'm Raj Kumar.</p>
-                  <p>I am a skilled Ruby On Rails developer, passionate about Web App design and development and a good workman that gets the job done. I can quickly maximize timely deliverables.</p>
+    </nav>
+
+    <section class="hero" id="about">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>Hi, I'm <span class="highlight">Raj Kumar</span></h1>
+                <p>Senior Backend Engineer specializing in Ruby on Rails, AWS, and scalable distributed systems</p>
+                <div class="cta-buttons">
+                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
+                    <a href="https://github.com/2017kamb" class="btn btn-secondary" target="_blank">View GitHub</a>
                 </div>
-              </div>
-              <div class="col-lg-6 col-md-12">
-                <div class="card-body">
-                  <div class="h4 mt-0 title">Basic Information</div>
-                  <div class="row mt-3">
-                    <div class="col-sm-4"><strong class="text-uppercase">Email:</strong></div>
-                    <div class="col-sm-8">2017kamb@gmail.com</div>
-                  </div>
-                  <div class="row mt-3">
-                    <div class="col-sm-4"><strong class="text-uppercase">Address:</strong></div>
-                    <div class="col-sm-8">Infocity, Gandhinagar, Gujarat - 32007</div>
-                  </div>
-                  <div class="row mt-3">
-                    <div class="col-sm-4"><strong class="text-uppercase">Language:</strong></div>
-                    <div class="col-sm-8">English, Hindi, Gujarati</div>
-                  </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Projects Delivered</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Team Members Led</div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
+            <div class="hero-image">
+                <div class="profile-card">
+                    <img src="images/rk.jpg" alt="Raj Kumar" class="profile-img">
+                    <h3 style="color: white; margin-bottom: 0.5rem;">Senior Backend Engineer</h3>
+                    <p style="color: #94a3b8;">Ahmedabad, India</p>
+                    <div class="social-links">                        
+                        <a href="https://github.com/2017kamb" target="_blank"><img src="images/github.png" alt="Raj Kumar" class="social-icon"></a>
+                        <a href="https://www.linkedin.com/in/2017kamb" target="_blank"><img src="images/linkedin.png" alt="Raj Kumar" class="social-icon"></a>
+                        <a href="https://twitter.com/2017kamb" target="_blank"><img src="images/twitter.jpg" alt="Raj Kumar" class="social-icon"></a>
+                        <a href="mailto:2017kamb@gmail.com"><img src="images/mail.png" alt="Raj Kumar" class="social-icon"></a>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="section" id="skill">
-        <div class="container">
-          <div class="h4 text-center mb-4 title">Professional Skills</div>
-          <div class="card" data-aos="fade-up" data-aos-anchor-placement="top-bottom">
-            <div class="card-body">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary"><span class="progress-badge">HTML</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div><span class="progress-value">100%</span>
-                    </div>
-                  </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Technical Expertise</h2>
+        <div class="skills-grid">
+            <div class="skill-category">
+                <h3>Backend & Languages</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Ruby on Rails</span>
+                    <span class="skill-tag">Ruby</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">RESTful APIs</span>
+                    <span class="skill-tag">GraphQL</span>
+                    <span class="skill-tag">Microservices</span>
                 </div>
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary"><span class="progress-badge">CSS</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div><span class="progress-value">100%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary"><span class="progress-badge">Bootstrap</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div><span class="progress-value">100%</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary"><span class="progress-badge">JavaScript</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div><span class="progress-value">100%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary"><span class="progress-badge">Ruby</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div><span class="progress-value">100%</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary"><span class="progress-badge">Rails</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div><span class="progress-value">100%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary"><span class="progress-badge">PostgreSQL</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div><span class="progress-value">100%</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary"><span class="progress-badge">MySQL</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div><span class="progress-value">100%</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary"><span class="progress-badge">Python</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div><span class="progress-value">100%</span>
-                    </div>
-                  </div>
-                </div> 
-                <div class="col-md-6">
-                  <div class="progress-container progress-primary"><span class="progress-badge">JQuery</span>
-                    <div class="progress">
-                      <div class="progress-bar progress-bar-primary" data-aos="progress-full" data-aos-offset="10" data-aos-duration="2000" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 100%;"></div><span class="progress-value">100%</span>
-                    </div>
-                  </div>
-                </div>                   
-              </div>
             </div>
-          </div>
+            <div class="skill-category">
+                <h3>Cloud & DevOps</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">AWS ECS</span>
+                    <span class="skill-tag">AWS Lambda</span>
+                    <span class="skill-tag">Docker</span>
+                    <span class="skill-tag">CI/CD</span>
+                    <span class="skill-tag">GitHub Actions</span>
+                    <span class="skill-tag">S3</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Databases</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">PostgreSQL</span>
+                    <span class="skill-tag">MySQL</span>
+                    <span class="skill-tag">DynamoDB</span>
+                    <span class="skill-tag">MongoDB</span>
+                    <span class="skill-tag">Redis</span>
+                </div>
+            </div>
+            <div class="skill-category">
+                <h3>Tools & Practices</h3>
+                <div class="skill-tags">
+                    <span class="skill-tag">Agile/Scrum</span>
+                    <span class="skill-tag">RSpec</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">Sidekiq</span>
+                    <span class="skill-tag">Nginx</span>
+                    <span class="skill-tag">Jira</span>
+                </div>
+            </div>
         </div>
-      </div>
-      <div class="section" id="experience">
-        <div class="container cc-experience">
-          <div class="h4 text-center mb-4 title">Work Experience</div>
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body cc-experience-header">
-                  <p>May, 2018 - Present</p>
-                  <div class="h5">I-Serve System Pvt. Ltd.</div>
+    </section>
+
+    <section id="experience">
+        <h2 class="section-title">Professional Journey</h2>
+        <div class="experience-timeline">
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3 class="experience-title">Team Lead - Backend</h3>
+                    <div class="experience-company">Thinkbiz Technology Pvt. Ltd.</div>
+                    <div class="experience-date">Jul 2022 - Oct 2025 | Ahmedabad, India</div>
                 </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <div class="h5">Senior Software Developer</div>
-                  <p>Contributing in the digitalization process of each and every factory work of my client.</p>
+                <div class="experience-description">
+                    <ul>
+                        <li>Led backend team of 4 engineers delivering large-scale SaaS applications</li>
+                        <li>Built high-performance Rails 7 RESTful APIs with PostgreSQL and microservices</li>
+                        <li>Improved system scalability and response time by 30% via query optimization</li>
+                        <li>Migrated legacy services to AWS ECS, reducing deployment time from 30 mins to 4 mins</li>
+                        <li>Implemented centralized logging with CloudWatch improving incident detection</li>
+                    </ul>
                 </div>
-              </div>
             </div>
-          </div>
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body cc-experience-header">
-                  <p>Dec, 2016 - May, 2018</p>
-                  <div class="h5">PlumSlice Labs</div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3 class="experience-title">Senior Software Developer</h3>
+                    <div class="experience-company">I-Serve Systems Pvt. Ltd.</div>
+                    <div class="experience-date">May 2018 - Jul 2022 | Gandhinagar, India</div>
                 </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <div class="h5">Software Developer</div>
-                  <p>Contributed in the development of SAAS based Product called PlumSlice.</p>
+                <div class="experience-description">
+                    <ul>
+                        <li>Delivered 10+ production-grade Rails applications for Kanji Group (Australia)</li>
+                        <li>Developed secure, scalable REST APIs using Ruby, Python, and PostgreSQL</li>
+                        <li>Managed AWS infrastructure: ECS, Lambda, S3, DynamoDB, RDS</li>
+                        <li>Dockerized Rails services and implemented CI/CD pipelines</li>
+                        <li>Achieved 25-30% performance improvement through code refactoring</li>
+                    </ul>
                 </div>
-              </div>
             </div>
-          </div>
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body cc-experience-header">
-                  <p>Jul, 2016 - Dec, 2016</p>
-                  <div class="h5">Comax Consulting Pvt. Ltd.</div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3 class="experience-title">Software Developer</h3>
+                    <div class="experience-company">PlumSlice Labs</div>
+                    <div class="experience-date">Jan 2017 - Apr 2018 | Ahmedabad, India</div>
                 </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <div class="h5">Software Developer</div>
-                  <p>Contributed in the development of multiple projects.</p>
+                <div class="experience-description">
+                    <ul>
+                        <li>Developed Product Information Management (PIM) and Digital Asset Management (DAM) modules</li>
+                        <li>Improved metadata model architecture supporting large product catalogs</li>
+                        <li>Collaborated with product teams for Agile sprint deliveries</li>
+                    </ul>
                 </div>
-              </div>
             </div>
-          </div>
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body cc-experience-header">
-                  <p>Jun, 2015 - Jul, 2016</p>
-                  <div class="h5">Headerlabs Infotech Pvt. Ltd.</div>
+
+            <div class="experience-item">
+                <div class="experience-header">
+                    <h3 class="experience-title">Junior Software Developer</h3>
+                    <div class="experience-company">HeaderLabs InfoTech Pvt. Ltd.</div>
+                    <div class="experience-date">Jan 2015 - Jun 2016 | Gurugram, India</div>
                 </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <div class="h5">Software Engineer</div>
-                  <p>Contributed in the development of multiple projects.</p>
+                <div class="experience-description">
+                    <ul>
+                        <li>Built features for WorkingGroupLink financial contact management SaaS</li>
+                        <li>Improved API response and frontend UX using jQuery and AJAX</li>
+                    </ul>
                 </div>
-              </div>
             </div>
-          </div>
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body cc-experience-header">
-                  <p>Jan, 2015 - Jun, 2015</p>
-                  <div class="h5">Headerlabs Infotech Pvt. Ltd.</div>
-                </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <div class="h5">Software Trainee</div>
-                  <p>Learn the basic building blocks of web app development and started to implement it in the live projects.</p>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="section">
-        <div class="container cc-education">
-          <div class="h4 text-center mb-4 title">Education</div>
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body cc-education-header">
-                  <p>2012 - 2015</p>
-                  <div class="h5">Master's Degree</div>
-                </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <div class="h5">Master of Computer Application</div>
-                  <p class="category">JSS Academy of Technical Education, NOIDA</p>            
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="card">
-            <div class="row">
-              <div class="col-md-3 bg-primary" data-aos="fade-right" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body cc-education-header">
-                  <p>2009 - 2013</p>
-                  <div class="h5">Bachelor's Degree</div>
-                </div>
-              </div>
-              <div class="col-md-9" data-aos="fade-left" data-aos-offset="50" data-aos-duration="500">
-                <div class="card-body">
-                  <div class="h5">Bachelor of Computer Application</div>
-                  <p class="category">Chhatrapati Shahu Ji Maharaj University, Kanpur</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="section" id="contact">
-        <div class="cc-contact-information" style="background-image: url('images/nature.jpg');background-position: center; background-repeat: no-repeat; background-size: cover;">
-          <div class="container">
-            <div class="cc-contact">
-              <div class="row">
-                <div class="col-md-9">
-                  <div class="card mb-0" data-aos="zoom-in">
-                    <div class="h4 text-center title">Contact Me</div>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <div class="card-body">
-                          <form action="https://formspree.io/f/mqkneayo" method="POST">
-                            <div class="p pb-3"><strong>Feel free to contact me </strong></div>
-                            <div class="row mb-3">
-                              <div class="col">
-                                <div class="input-group"><span class="input-group-addon"><i class="fa fa-envelope"></i></span>
-                                  <input class="form-control" type="email" name="_replyto" placeholder="Your E-mail" required="required"/>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="row mb-3">
-                              <div class="col">
-                                <div class="form-group">
-                                  <textarea class="form-control" name="message" placeholder="Your Message" required="required"></textarea>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="row">
-                              <div class="col">
-                                <button class="btn btn-primary" type="submit">Send</button>
-                              </div>
-                            </div>
-                          </form>
-                        </div>
-                      </div>
-                      <div class="col-md-6">
-                        <div class="card-body">
-                          <p class="mb-0"><strong>Address </strong></p>
-                          <p class="pb-2">Infocity, Gandhinagar, Gujarat - 32007</p>
-                          <p class="mb-0"><strong>Email</strong></p>
-                          <p>2017kamb@gmail.com</p>
-                        </div>
-                      </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title">Let's Connect</h2>
+        <div class="contact-grid">
+            <div class="contact-info">
+                <div class="contact-item">
+                    <div class="contact-icon">📧</div>
+                    <div>
+                        <h4>Email</h4>
+                        <p>2017kamb@gmail.com</p>
                     </div>
-                  </div>
                 </div>
-              </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <div>
+                        <h4>Phone</h4>
+                        <p>+91 8802538108</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">📍</div>
+                    <div>
+                        <h4>Location</h4>
+                        <p>Ahmedabad, Gujarat, India</p>
+                    </div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">💼</div>
+                    <div>
+                        <h4>LinkedIn</h4>
+                        <p><a href="https://www.linkedin.com/in/2017kamb" target="_blank" style="color: var(--primary);">linkedin.com/in/2017kamb</a></p>
+                    </div>
+                </div>
             </div>
-          </div>
+
+            <form class="contact-form" action="https://formspree.io/f/mqkneayo" method="POST">
+                <div class="form-group">
+                    <label for="email">Your Email</label>
+                    <input type="email" id="email" name="_replyto" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
+            </form>
         </div>
-      </div>
-      <footer class="footer sm_img_rk">
-        <div class="container text-center">
-          <a class="btn btn-default btn-round btn-sm btn-icon" href="https://www.facebook.com/2017kamb" rel="tooltip" title="Follow me on Facebook"><img src="images/fb.png" alt="Image"/></a>
-          <a class="btn btn-default btn-round btn-sm btn-icon" href="https://twitter.com/2017kamb" rel="tooltip" title="Follow me on Twitter"><img src="images/twitter.png" alt="Image"/></a>
-          <a class="btn btn-default btn-round btn-sm btn-icon" href="https://github.com/2017kamb" rel="tooltip" title="Follow me on Github"><img src="images/github.png" alt="Image"/></a>
-          <a class="btn btn-default btn-round btn-sm btn-icon" href="https://www.instagram.com/2017kamb" rel="tooltip" title="Follow me on Instagram"><img src="images/insta.jpeg" alt="Image"/></a>
-          <a class="btn btn-default btn-round btn-sm btn-icon" href="https://learnwithrkumar.blogspot.com" rel="tooltip" title="Follow me on blogger"><img src="images/blog.jpeg" alt="Image"/></a>
-          <a class="btn btn-default btn-round btn-sm btn-icon" href="https://www.linkedin.com/in/2017kamb" rel="tooltip" title="Follow me on linkedin"><img src="images/linkedin.png" alt="Image"/></a>
-          <a class="btn btn-default btn-round btn-sm btn-icon" href="https://stackoverflow.com/users/6507755/2017kamb" rel="tooltip" title="Follow me on stack overflow"><img src="images/so.png" alt="Image"/></a>
-        </div>
-        <div class="h4 title text-center">&#169; 2022 Raj Kumar</div>
-        <div class="text-center text-muted">
-          <p>Design - <a class="credit" href="https://templateflip.com" target="_blank">TemplateFlip</a></p>
-        </div>
-      </footer>
-      <script src="js/core/jquery.3.2.1.min.js?ver=1.1.0"></script>
-      <script src="js/core/popper.min.js?ver=1.1.0"></script>
-      <script src="js/core/bootstrap.min.js?ver=1.1.0"></script>
-      <script src="js/now-ui-kit.js?ver=1.1.0"></script>
-      <script src="js/aos.js?ver=1.1.0"></script>
-      <script src="scripts/main.js?ver=1.1.0"></script>
-      <script src="js/custom.js"></script>
-    </div>
-  </body>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Raj Kumar. All rights reserved.</p>
+        <p style="margin-top: 0.5rem; color: var(--gray);">Senior Backend Engineer | Ruby on Rails | AWS</p>
+    </footer>
+</body>
 </html>
